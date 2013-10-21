@@ -1,0 +1,15 @@
+#ifndef STACK_CFG_H
+#define STACK_CFG_H
+
+/* CMake creates stack_cfg.h from stack_cfg_h.in --
+ * changes in the former will be overwritten!
+ *
+ *
+ * Autotools defines many macros, but the only one 
+ * that seems to be in use in the code is HAVE_TIMER
+ */
+
+#cmakedefine HAVE_TIMER 1
+
+
+#endif //STACK_CFG_H
