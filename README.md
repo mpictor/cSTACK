@@ -1,4 +1,17 @@
-See INSTALL for build instructions or download prebuilt binaries.
+[STACK](http://css.csail.mit.edu/stack/) code analyzer
+----
+### find optimization-unstable code
+
+This is a fork of STACK which uses CMake as the build system and
+builds the dependencies (including llvm and clang) automatically
+and with the correct options.
+
+Once this works well, I will approach STACK's authors about merging
+my changes.
+
+INSTALL will contain build instructions - this isn't in a working
+state yet.
+
 Make sure STACK binaries are in the PATH.
 
 
