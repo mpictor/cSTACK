@@ -4,9 +4,11 @@
 
 This is a fork of STACK which uses CMake as the build system and
 builds the dependencies (including llvm and clang) automatically
-and with the correct options.
+and with the correct options - no more having to go through the
+many steps necessary to get special builds of llvm and clang
+working without interfering with the system versions.
 
-Once this works well, I will approach STACK's authors about merging
+__Once this works well__, I will approach STACK's authors about merging
 my changes.
 
 INSTALL will contain build instructions - this isn't in a working
