@@ -1,6 +1,6 @@
 [STACK](http://css.csail.mit.edu/stack/) code analyzer
 ----
-### find optimization-unstable code
+#### find optimization-unstable code
 
 This is a fork of STACK which uses CMake as the build system and
 builds the dependencies (including llvm and clang) automatically
@@ -67,4 +67,4 @@ Contact
 -------
 
 If you find any bugs in STACK, feel free to contact us: you can send
-us email at int@pdos.csail.mit.edu.
+us email at int`@`pdos.csail.mit.edu.
