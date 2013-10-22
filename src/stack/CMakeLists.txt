@@ -1,8 +1,20 @@
 
-message( "FIXME!!! AM_CXXFLAGS = `llvm-config --cxxflags` -Werror -Wall -std=c++11 -fno-strict-aliasing\nbuild llvm first, then use llvm-config?" )
+message( "FIXME!!! AM_CXXFLAGS = `llvm-config --cxxflags`\nbuild llvm first, then use llvm-config?" )
 
+include_directories( BEFORE ${CMAKE_BINARY_DIR}/src/3rdparty/
+                            ${CMAKE_SOURCE_DIR}/src/3rdparty/
+                            ${CMAKE_BINARY_DIR}/include
+                            ${CMAKE_SOURCE_DIR}/src/3rdparty/llvm/include
+                            ${CMAKE_BINARY_DIR}/src/3rdparty/llvm/include
+                            ${CMAKE_SOURCE_DIR}/src/3rdparty/llvm/tools/clang/include/
+                    )
 
-#also includes what was identified as libsat_la in autotools files
+# with autotools, apparently it wasn't necessary to define the following macros. not sure why.
+add_definitions( -D__STDC_LIMIT_MACROS -D__STDC_CONSTANT_MACROS )
+
+set( CMAKE_CXX_FLAGS "-Werror -Wall -fno-strict-aliasing ${CMAKE_CXX_FLAGS}")
+
+# liboptck_SOURCES also includes what was identified as libsat_la in the autotools files
 set( liboptck_SOURCES
         AntiAlgebra.cc       BugOnInt.cc           InlineOnly.cc
         AntiDCE.cc           BugOnLibc.cc          LoadElim.cc
