@@ -4,7 +4,7 @@
 #include <sys/resource.h>
 #include <llvm/Pass.h>
 #include <llvm/Support/CommandLine.h>
-#include "config.h"
+#include "stack_cfg.h"
 
 using namespace llvm;
 
